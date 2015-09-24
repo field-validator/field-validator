@@ -6,15 +6,23 @@
 //Define a pattern
 var pattern = {
   name: {
-    required: true
+    required: true,
+    type:'string'
   },
   age: {
-    required: true
+    required: true,
+    type:'number'
+  },
+  sex: {
+    required: false,
+    type: 'string'
   }
 };
 
 var data = {
-  name:'Remind Wang'
+  name:'Remind Wang',
+  age:'20',
+  sex: 1
 };
 
 //Generate validator by the pattern
