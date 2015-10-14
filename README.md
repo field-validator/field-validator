@@ -26,7 +26,7 @@ var result = validator.perform(data);
 
 ```
 
-The result should contains standard errors if data is invalid. Or a empty object.
+The result should contain standard errors if data is invalid. Or a empty object.
 I suppose fv is the reference of field-validator. Actually, I like short name,don't you?
 
 
