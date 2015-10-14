@@ -1,0 +1,32 @@
+{
+  "name": "fieldValidator",
+  "version": "0.0.1",
+  "description": "customer validator for form like fields",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/spec",
+    "build": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:field-validator/field-validator.git"
+  },
+  "keywords": [
+    "validator"
+  ],
+  "author": "wangpin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/field-validator/field-validator/issues"
+  },
+  "homepage": "https://github.com/field-validator/field-validator",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "mocha": "^2.3.3"
+  }
+}
