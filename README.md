@@ -7,8 +7,8 @@ flexible field validator
 ### Open sample
 
  ```
-//Define patterns
-var patterns = {
+//Define restrictions
+var restrictions = {
   name: {
     required: true
   },
@@ -18,8 +18,8 @@ var patterns = {
   }
 };
 
-//Generate validator by the patterns
-var validator = fv.gen(patterns);
+//Generate validator by the restrictions
+var validator = fv.gen(restrictions);
 
 //Then perform validation
 var result = validator.perform(data);
@@ -34,9 +34,9 @@ I suppose fv is the reference of field-validator. Actually, I like short name,do
 
 * Strict Model
 
-By default the validator is not strict model, it means these passed fields will not make error occurs even if part of them are not defined in patterns.
+By default the validator is relax model, it means these fields which are not defined in restriction object are not going to make validation errors.
 
-The strict property could be passed when init validator follwing
+The strict property could be configed when init validator like following
 ```
 fv.gen(patterns,{ strict: true });
 ```
@@ -52,7 +52,9 @@ fv.gen(patterns,{ all: true });
 And it is called allSettled model;
 
 
-### Local development
+### Contributing
+
+It's welcome every one who are intersted this to take part in this work. You can fork this repo and finish development on it. And each pull request will be handled as soon as possible.
 
 #### Build
 ```
@@ -60,9 +62,7 @@ npm run-script build
 ```
 
 #### Unit test
-```
-npm test
-```
+Open [jasmine_report.html] ()
 
 ## LICENSE
 
