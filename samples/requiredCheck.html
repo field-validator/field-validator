@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="../build/fieldValidator.min.js"></script>
+<script type="text/javascript" src="../src/fieldValidator.js"></script>
 <script type="text/javascript">
 //Define a pattern
-var pattern = {
+var restrictions = {
   name: {
     required: true
   },
@@ -18,7 +18,7 @@ var data = {
 };
 
 //Generate validator by the pattern
-var validator = fv.gen(pattern);
+var validator = fv.newInstance(restrictions);
 
 //Then perform validation
 var result = validator.perform(data);

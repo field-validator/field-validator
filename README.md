@@ -18,7 +18,7 @@ var restrictions = {
 };
 
 //Generate validator by the restrictions
-var validator = fv.gen(restrictions);
+var validator = fv.newInstance(restrictions);
 
 //Then perform validation
 var result = validator.perform(data);

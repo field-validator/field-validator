@@ -1,0 +1,25 @@
+{
+  "name": "fieldValidator",
+  "description": "config-based field validator",
+  "main": "build/fieldValidator.min.js",
+  "authors": [
+    "field-validator"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "field",
+    "validator"
+  ],
+  "moduleType": [],
+  "homepage": "http://field-validator.github.io/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jasmine-core": "jasmine#~2.3.4"
+  }
+}
