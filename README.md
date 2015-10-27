@@ -38,7 +38,10 @@ npm run-script build
 ```
 
 #### Unit test
-Open [jasmine_report.html] ()
+Open test/report/jasmine_report.html in your browser
+
+### Test report
+(online report] (http://field-validator.github.io/test/report/jasmine_report.online.html)
 
 ## LICENSE
 

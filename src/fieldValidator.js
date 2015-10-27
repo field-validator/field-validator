@@ -12,38 +12,36 @@
     return argArr.join(' ');
   };
 
-  function validator(restrictions, options) {
+  function fieldValidator(restrictions, options) {
 
     //TODO. Check restrictions, throw errors for unsupported features and bad declaration
 
     this.restrictions = restrictions;
     this.restrictionNames = Object.getOwnPropertyNames(restrictions);
     this.strict = false;
-    this.all = false;
     this.options = options;
-
     this.errors = [];
+    this.isPassed = true;
 
     this.init();
   }
 
-  validator.newInstance = function(restrictions, options) {
-    return new validator(restrictions, options);
+  fieldValidator.newInstance = function(restrictions, options) {
+    return new fieldValidator(restrictions, options);
   };
 
-  validator.prototype.init = function() {
+  fieldValidator.prototype.init = function() {
     var v = this,
       options = v.options;
-    if (options) {
-      v.strict = v.options.strict ? v.options.strict : false;
-    }
+      if (options) {
+        v.strict = v.options.strict ? v.options.strict : false;
+      }
   }
 
-  validator.prototype.perform = function(data) {
+  fieldValidator.prototype.perform = function(data) {
     var v = this,
       restrictions = this.restrictions,
       errors = [],
-      dataFields = Object.getOwnPropertyNames(data),
       patternItems = v.patternItems;
 
     var isType = function(variable, type) {
@@ -55,8 +53,8 @@
     }
 
     //Passed in data precheck, it should be an object
-    if (!data || (typeof data !== 'object')) {
-      throw 'Passed in data is null,or undefined,or not an object';
+    if (!data || (typeof data !== 'object') || Object.getOwnPropertyNames(data).length === 0) {
+      throw 'Passed in data has no attributes, or is null, or undefined, or not an object';
     }
 
     //Check if corrsponding fields meet the constraint
@@ -143,6 +141,9 @@
     if (errors.length > 0) {
       v.errors = errors;
       v.isPassed = false;
+    } else {
+      v.errors.splice(0, v.errors.length);
+      v.isPassed = true;
     }
 
     return {
@@ -150,17 +151,17 @@
     };
   }
 
-  validator.prototype.compile = function(restrictions) {
+  fieldValidator.prototype.compile = function(restrictions) {
     this.restrictions = restrictions;
   }
 
-  validator.prototype.isPassed = function() {
+  fieldValidator.prototype.getState = function() {
     return this.isPassed;
   }
 
 
-  w.fieldValidator = validator;
-  w.fv = validator;
+  w.fieldValidator = fieldValidator;
+  w.fv = fieldValidator;
 
 
 })(window);
