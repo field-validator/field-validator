@@ -19,7 +19,7 @@ var restrictions = {
 };
 
 //生成验证对象
-var validator = fv.gen(restrictions);
+var validator = fv.newInstance(restrictions);
 
 //验证数据对象
 var result = validator.perform(data);
