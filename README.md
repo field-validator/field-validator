@@ -41,7 +41,7 @@ npm run-script build
 Open test/report/jasmine_report.html in your browser
 
 ### Test report
-(online report] (http://field-validator.github.io/test/report/jasmine_report.online.html)
+[online report] (http://field-validator.github.io/test/report/jasmine_report.online.html)
 
 ## LICENSE
 
