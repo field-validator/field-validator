@@ -1,14 +1,12 @@
 # field-validator
+config-based field validator
 
-[English doc] ()
-config-based field validator 基于配置的字段验证帮手
+[中文文档] (https://github.com/field-validator/field-validator/blob/master/english-doc.md)
 
-## 安装
-未来会提供 npm 和 bower 的安装。
+### Open sample
 
-## 使用
  ```
-//定义验证规则
+//Define restrictions
 var restrictions = {
   name: {
     required: true
@@ -19,17 +17,29 @@ var restrictions = {
   }
 };
 
-//生成验证对象
+//Generate validator by the restrictions
 var validator = fv.gen(restrictions);
 
-//验证数据对象
+//Then perform validation
 var result = validator.perform(data);
 
 ```
-如果验证失败，result中会包含错误信息。
 
+The result should contain standard errors if data is invalid. Or a empty object.
+I suppose fv is the reference of field-validator. Actually, I like short name,don't you?
 
-## 更多用法
+### Contributing
+
+It's welcome every one who are intersted this to take part in this work. You can fork this repo and finish development on it. And each pull request will be handled as soon as possible.
+
+#### Build
+```
+npm run-script build
+```
+
+#### Unit test
+Open [jasmine_report.html] ()
 
 ## LICENSE
+
 MIT
