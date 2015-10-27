@@ -1,7 +1,7 @@
 # field-validator
 config-based field validator
 
-[中文文档] (https://github.com/field-validator/field-validator/blob/master/english-doc.md)
+[中文文档] (https://github.com/field-validator/field-validator/blob/master/doc_zh.md)
 
 ### Open sample
 
