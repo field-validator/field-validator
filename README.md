@@ -1,11 +1,16 @@
-# field-validator
+# field-validator [![npm version](https://badge.fury.io/js/field-validator.svg)](http://badge.fury.io/js/field-validator)
 config-based field validator
 
 [中文文档](https://github.com/field-validator/field-validator/blob/master/README_zh.md)
 
 ### Install
+
 ```
 bower install field-validator
+```
+
+```
+npm install field-validator
 ```
 
 ### Open sample

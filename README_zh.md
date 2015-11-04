@@ -1,4 +1,4 @@
-# field-validator
+# field-validator [![npm version](https://badge.fury.io/js/field-validator.svg)](http://badge.fury.io/js/field-validator)
 
 基于配置的字段验证
 
