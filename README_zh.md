@@ -3,8 +3,13 @@
 基于配置的字段验证
 
 ## 安装
+
 ```
 bower install field-validator
+```
+
+```
+npm install field-validator
 ```
 
 ## 使用
