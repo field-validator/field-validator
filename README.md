@@ -32,7 +32,7 @@ var result = validator.perform(data);
 
 ```
 
-The result contains standard errors if data is invalid. And if you only need to know if validation is passed or not , you use get the state by this:
+The result contains standard errors if data is invalid. And if you only need to know if validation is passed or not:
 ```
 validator.getState();
 ```
@@ -48,9 +48,14 @@ npm run-script build
 
 Open test/report/jasmine_report.html in your browser
 
+<<<<<<< HEAD
 There is an online test report.
 
 (online report] (http://field-validator.github.io/test/report/jasmine_report.online.html)
+=======
+### Test report
+[online report] (http://field-validator.github.io/test/report/jasmine_report.online.html)
+>>>>>>> 76e6e6b036e6ef2f878b0483f4c2cf0a3d7d9a24
 
 ## LICENSE
 
