@@ -3,7 +3,14 @@ config-based field validator
 
 [中文文档] (https://github.com/field-validator/field-validator/blob/master/README_zh.md)
 
+### Get
+```
+bower install field-validator
+```
+
 ### Open sample
+
+fv is the alias of field-validator that you can use it like $ for jquery.
 
  ```
 //Define restrictions
@@ -25,12 +32,12 @@ var result = validator.perform(data);
 
 ```
 
-The result should contain standard errors if data is invalid. Or a empty object.
-I suppose fv is the reference of field-validator. Actually, I like short name,don't you?
+The result contains standard errors if data is invalid. And if you only need to know if validation is passed or not , you use get the state by this:
+```
+validator.getState();
+```
 
 ### Contributing
-
-It's welcome every one who are intersted this to take part in this work. You can fork this repo and finish development on it. And each pull request will be handled as soon as possible.
 
 #### Build
 ```
@@ -38,9 +45,11 @@ npm run-script build
 ```
 
 #### Unit test
+
 Open test/report/jasmine_report.html in your browser
 
-### Test report
+There is an online test report.
+
 (online report] (http://field-validator.github.io/test/report/jasmine_report.online.html)
 
 ## LICENSE
