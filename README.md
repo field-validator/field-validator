@@ -1,9 +1,9 @@
 # field-validator
 config-based field validator
 
-[中文文档] (https://github.com/field-validator/field-validator/blob/master/README_zh.md)
+[中文文档](https://github.com/field-validator/field-validator/blob/master/README_zh.md)
 
-### Get
+### Install
 ```
 bower install field-validator
 ```

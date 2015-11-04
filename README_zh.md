@@ -3,9 +3,12 @@
 基于配置的字段验证
 
 ## 安装
-未来会提供 npm 和 bower 的安装。
+```
+bower install field-validator
+```
 
 ## 使用
+fv 是field-validator的别名。可以直接使用。
  ```
 //定义验证规则
 var restrictions = {
@@ -27,7 +30,9 @@ var result = validator.perform(data);
 ```
 如果验证失败，result中会包含错误信息。
 
-## 协作开发
+## 贡献
+
+非常欢迎协作开发。可以申请成为组织成员。
 
 ### 构建
 ```
@@ -39,6 +44,7 @@ npm run-script build
 
 ### 在线的测试报告
 测试脚本提交之后，可以在线查看测试报告。
+
 [online report] (http://field-validator.github.io/test/report/jasmine_report.online.html)
 
 

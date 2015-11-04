@@ -1,8 +1,11 @@
 node_modules
+bower_components
 src
 build
 samples
 test
 Gruntfile.js
 .gitignore
+.bowerrc
+bower.json
 

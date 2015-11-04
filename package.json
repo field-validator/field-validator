@@ -1,8 +1,8 @@
 {
-  "name": "fieldValidator",
+  "name": "field-validator",
   "version": "0.0.1",
   "description": "customer validator for form like fields",
-  "main": "index.js",
+  "main": "lib/field-validator",
   "directories": {
     "test": "test"
   },
