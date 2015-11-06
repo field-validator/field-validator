@@ -87,7 +87,7 @@
           }
         }
 
-        //Check number range. TODO
+        //Check number range
         if (typeof item === 'number') {
 
           if (restriction.max !== null && item > restriction.max) {

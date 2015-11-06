@@ -5,10 +5,11 @@ config-based field validator
 
 ### Install
 
+front-end
 ```
 bower install field-validator
 ```
-
+back-end
 ```
 npm install field-validator
 ```
@@ -31,7 +32,7 @@ var restrictions = {
 
 //Generate validator by the restrictions
 var validator = fv.newInstance(restrictions);
-
+var data = { name:'wangpin'};
 //Then perform validation
 var result = validator.perform(data);
 
@@ -42,7 +43,42 @@ The result contains standard errors if data is invalid. And if you only need to 
 validator.getState();
 ```
 
+### API
+* Support properties in restriction
+
+  |name|description|datatype|examples
+  |-----|----------|---------|-------
+  |required|set field to be required |boolean|true
+  |type|set field type|string|'string'
+  |maxLength|set max length of string or array|number|10
+  |minLength|set min length of string or array|number|1
+  |max|set max value of number|number|1001
+  |min|set min value of number|number|-38
+  |elementType|set element type of array|string|'string'
+
+ About field type and elementType, currently fv could support several primitive types:
+ ```
+ boolean
+ number
+ string
+ ```
+ fv thinks null,undefined should not be one of dataTypes. Symbol is not supported also.
+
+ * fv.newInstance(restrictions,options)
+
+ Create fv instances(called fvObj in following introductions) by given restrictions and options
+
+ * fvObj.perform(data)
+
+ Perform validation on given data. The data should be a pure json object.And currently, it can only check data whose properties types are string,number,boolean and array.
+
+ * fv.getState
+ Return the state of the latest perform operation. eg, true means validation passed.
+
+
+
 ### Contributing
+Please feel free to send your changes.
 
 #### Build
 ```
@@ -53,7 +89,7 @@ npm run-script build
 
 Open test/report/jasmine_report.html in your browser
 
-There is an [online report] (http://field-validator.github.io/test/report/jasmine_report.online.html).
+There is an [online report](http://field-validator.github.io/test/report/jasmine_report.online.html).
 
 
 ## LICENSE
