@@ -64,15 +64,15 @@ validator.getState();
  ```
  fv thinks null,undefined should not be one of dataTypes. Symbol is not supported also.
 
- * fv.newInstance(restrictions,options)
+* fv.newInstance(restrictions,options)
 
  Create fv instances(called fvObj in following introductions) by given restrictions and options
 
- * fvObj.perform(data)
+* fvObj.perform(data)
 
  Perform validation on given data. The data should be a pure json object.And currently, it can only check data whose properties types are string,number,boolean and array.
 
- * fv.getState
+* fv.getState
  Return the state of the latest perform operation. eg, true means validation passed.
 
 
