@@ -73,19 +73,9 @@ validator.getState();
  Perform validation on given data. The data should be a pure json object.And currently, it can only check data whose properties types are string,number,boolean and array.
 
 * fv.getState
- Return the state of the latest perform operation. eg, true means validation passed.
+ Return the state of the latest perform operation. E.g. true means validation passed.
 
-
-
-### Contributing
-Please feel free to send your changes.
-
-#### Build
-```
-npm run-script build
-```
-
-#### Unit test
+### Browser Unit test
 
 Open test/report/jasmine_report.html in your browser
 
