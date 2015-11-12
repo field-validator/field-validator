@@ -1,6 +1,6 @@
 {
   "name": "field-validator",
-  "version": "0.0.2",
+  "version": "0.1.2",
   "description": "config based validator for form like fields",
   "main": "lib/field-validator",
   "directories": {

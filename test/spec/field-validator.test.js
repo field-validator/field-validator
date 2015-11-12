@@ -8,6 +8,10 @@ describe('Test suite of field-validator', function() {
         name: {
             required: true,
             type: 'string'
+        },
+        children:{
+            type:'Array',
+            uniq:true
         }
     }
 
@@ -37,6 +41,13 @@ describe('Test suite of field-validator', function() {
            validator.perform({
                 name: 'Remind'
             }).should.be.a('object')
+        })
+
+        it('Expect perform executes with array that has duplicate elements', function() {
+            validator.perform({
+                name: 'Remind',
+                children:['Bob','Lily','Bob']
+            }).errors[0].should.equal('children has duplicate elements')
         })
 
         it('Expect perform executes on invalid data then return an object with errors properties', function() {

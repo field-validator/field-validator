@@ -46,17 +46,25 @@ validator.getState();
 ### API
 * Support properties in restriction
 
-  |name|description|datatype|examples
-  |-----|----------|---------|-------
-  |required|set field to be required |boolean|true
-  |type|set field type|string|'string'
-  |maxLength|set max length of string or array|number|10
-  |minLength|set min length of string or array|number|1
-  |max|set max value of number|number|1001
-  |min|set min value of number|number|-38
-  |elementType|set element type of array|string|'string'
+  |name|description|datatype|examples|default
+  |-----|----------|---------|-------|-------
+  |required|set field to be required |boolean|true|false
+  |type|set field type|string|'string'|
+  |maxLength|set max length of string or array|number|10|
+  |minLength|set min length of string or array|number|1|
+  |max|set max value of number|number|1001|
+  |min|set min value of number|number|-38|
+  |elementType|set element type of array|string|'string'|
+  |uniqElement|allow an array has uniq constraint for elements|boolean|true|false
 
- About field type and elementType, currently fv could support several primitive types:
+ Supported field types:
+ ```
+ boolean
+ number
+ string
+ Array
+ ```
+ For elementType, currently fv could support several primitive types:
  ```
  boolean
  number
