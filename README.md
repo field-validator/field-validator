@@ -1,4 +1,4 @@
-# field-validator field-validator)
+# field-validator field-validator
 config-based field validator
 
 [![npm version](https://badge.fury.io/js/field-validator.svg)](https://www.npmjs.com/package/field-validator) [![Build Status](https://travis-ci.org/field-validator/field-validator.svg)](https://travis-ci.org/field-validator/field-validator)
